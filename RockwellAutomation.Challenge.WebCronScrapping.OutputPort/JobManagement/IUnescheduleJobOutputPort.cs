@@ -5,9 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace RockwellAutomation.Challenge.WebCronScrapping.OutputPort.WebScrapingResult
+namespace RockwellAutomation.Challenge.WebCronScrapping.OutputPort.JobManagement
 {
-    public interface IGenerateJobOutputPort
+    public interface IUnescheduleJobOutputPort
     {
         void Handler(WebScrapingResultDto webScrapingResultDto);
     }

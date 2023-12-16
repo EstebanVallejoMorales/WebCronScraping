@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace RockwellAutomation.Challenge.WebCronScrapping.InputPort.GenerateJob
+namespace RockwellAutomation.Challenge.WebCronScrapping.InputPort.JobManagement
 {
     public interface IGenerateJobInputPort
     {
