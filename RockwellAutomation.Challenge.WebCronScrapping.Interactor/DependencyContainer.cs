@@ -1,4 +1,7 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+﻿using Amazon;
+using Amazon.DynamoDBv2;
+using Amazon.DynamoDBv2.DataModel;
+using Microsoft.Extensions.DependencyInjection;
 using Quartz;
 using Quartz.Impl;
 using RockwellAutomation.Challenge.WebCronScrapping.InputPort.JobManagement;
@@ -22,6 +25,13 @@ namespace RockwellAutomation.Challenge.WebCronScrapping.Interactor
             services.AddScoped<IScheduleWebScrapingInputPort, ScheduleWebScrapingInteractor>();
             services.AddScoped<IGenerateJobInputPort, GenerateJobInteractor>();
             services.AddScoped<IJob, WebScrapingJob>();
+            services.AddSingleton<IDynamoDBContext,DynamoDBContext>();
+            var config = new AmazonDynamoDBConfig
+            {
+                RegionEndpoint = RegionEndpoint.USEast1
+            };
+            var client = new AmazonDynamoDBClient(config);
+            services.AddSingleton<IAmazonDynamoDB>(client);
             services.AddQuartz(q =>
             {
                 q.UseMicrosoftDependencyInjectionJobFactory();

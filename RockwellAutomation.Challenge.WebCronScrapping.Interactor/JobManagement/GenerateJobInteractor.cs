@@ -33,8 +33,8 @@ namespace RockwellAutomation.Challenge.WebCronScrapping.Interactor.JobManagement
 
             try
             {
-                var jobDataMap = new JobDataMap { { "Url", url } };
                 string guidId = Guid.NewGuid().ToString();
+                var jobDataMap = new JobDataMap { { "Url", url }, { "JobId", guidId } };
 
                 IScheduler scheduler = await _schedulerFactory.GetScheduler();
                 await scheduler.Start();
