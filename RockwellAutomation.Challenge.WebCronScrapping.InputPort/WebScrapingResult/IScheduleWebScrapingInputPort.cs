@@ -2,6 +2,6 @@
 {
     public interface IScheduleWebScrapingInputPort
     {
-
+        void Handler(string url);
     }
 }

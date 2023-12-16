@@ -2,6 +2,8 @@
 
 namespace RockwellAutomation.Challenge.WebCronScrapping.Controllers
 {
+    [ApiController]
+    [Route("[controller]")]
     public class WebCronScrapingController : Controller
     {
         private readonly ILogger<WebCronScrapingController> _logger;
