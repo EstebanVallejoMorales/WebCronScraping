@@ -53,11 +53,7 @@ namespace RockwellAutomation.Challenge.WebCronScrapping.Interactor.JobManagement
                     //.RepeatForever())
                     .Build();
 
-                //await scheduler.ScheduleJob(jobDetail, cronTrigger);
                 await scheduler.ScheduleJob(jobDetail, cronTrigger);
-
-                // some sleep to show what's happening
-                //await Task.Delay(TimeSpan.FromSeconds(60));
 
                 resultDto.Message = $"Job with ID: {guidId} successfuly created. You can ask for the result using this ID.";
                 _generateJobOutputPort.Handler(resultDto);
