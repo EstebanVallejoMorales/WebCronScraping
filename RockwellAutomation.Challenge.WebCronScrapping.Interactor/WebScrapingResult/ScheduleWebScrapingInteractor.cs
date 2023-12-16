@@ -20,7 +20,7 @@ namespace RockwellAutomation.Challenge.WebCronScrapping.Interactor.WebScrapingRe
             _scheduleWebScrapingOutputPort = scheduleWebScrapingOutputPort;
         }
 
-        public async void Handler(string url)
+        public async Task Handler(string url)
         {
             WebScrapingResultDto resultDto = new WebScrapingResultDto();
 
@@ -29,10 +29,15 @@ namespace RockwellAutomation.Challenge.WebCronScrapping.Interactor.WebScrapingRe
                 List<string> headers;
                 var browserFetcher = new BrowserFetcher();
                 string chromiumExecutablePath = "/usr/bin/chromium";
+                //string chromiumExecutablePath = "/usr/bin/google-chrome-unstable";
                 LaunchOptions launchOptions = new LaunchOptions
                 {
                     ExecutablePath = chromiumExecutablePath,
-                    Headless = true
+                    Headless = true,
+                    Args = new string[]
+                    {
+                        "--no-sandbox"
+                    }
                 };
 
                 await browserFetcher.DownloadAsync();

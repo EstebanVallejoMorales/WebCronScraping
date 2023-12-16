@@ -14,4 +14,12 @@
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\RockwellAutomation.Challenge.WebCronScrapping.Dto\RockwellAutomation.Challenge.WebCronScrapping.Dto.csproj" />
+    <ProjectReference Include="..\RockwellAutomation.Challenge.WebCronScrapping.InputPort\RockwellAutomation.Challenge.WebCronScrapping.InputPort.csproj" />
+    <ProjectReference Include="..\RockwellAutomation.Challenge.WebCronScrapping.Interactor\RockwellAutomation.Challenge.WebCronScrapping.Interactor.csproj" />
+    <ProjectReference Include="..\RockwellAutomation.Challenge.WebCronScrapping.OutputPort\RockwellAutomation.Challenge.WebCronScrapping.OutputPort.csproj" />
+    <ProjectReference Include="..\RockwellAutomation.Challenge.WebCronScrapping.Presenter\RockwellAutomation.Challenge.WebCronScrapping.Presenter.csproj" />
+  </ItemGroup>
+
 </Project>
