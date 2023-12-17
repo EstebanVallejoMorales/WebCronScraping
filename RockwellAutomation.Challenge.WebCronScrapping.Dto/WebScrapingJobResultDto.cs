@@ -10,5 +10,6 @@ namespace RockwellAutomation.Challenge.WebCronScrapping.Dto
     {
         public string JobId { get; set; }
         public string Headers { get; set; }
+        public string ExecutionDateInfo { get; set; }
     }
 }

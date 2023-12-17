@@ -16,6 +16,18 @@ namespace RockwellAutomation.Challenge.WebCronScrapping
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
+            builder.Services.AddCors(options =>
+            {
+                options.AddPolicy(name: "_corsConfiguration",
+                                  builder =>
+                                  {
+                                      builder
+                                             .AllowAnyOrigin()
+                                             .AllowAnyMethod()
+                                             .AllowAnyHeader();
+                                  });
+            });
+
             builder.Services.DependencyInteractor();
             builder.Services.DependencyPresenter();
             builder.Services.DependencyDynamoDb();
@@ -28,6 +40,8 @@ namespace RockwellAutomation.Challenge.WebCronScrapping
                 app.UseSwagger();
                 app.UseSwaggerUI();
             }
+
+            app.UseCors("_corsConfiguration");
 
             app.UseHttpsRedirection();
 

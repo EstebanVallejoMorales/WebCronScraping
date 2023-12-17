@@ -33,9 +33,9 @@ namespace RockwellAutomation.Challenge.WebCronScrapping.Interactor.WebScrapingRe
                 RegionEndpoint = RegionEndpoint.USEast1
             };
 
-            //var credentials = new BasicAWSCredentials("", "");
-            //var client = new AmazonDynamoDBClient(credentials, config);
-            var client = new AmazonDynamoDBClient(config);
+            var credentials = new BasicAWSCredentials("AKIASSBH4I4MXLQPPGWJ", "k39RbpINfMv6/OLfyZPG7d1WXrLC+TLBn6pj+EWp");
+            var client = new AmazonDynamoDBClient(credentials, config);
+            //var client = new AmazonDynamoDBClient(config);
             DynamoDBContext dynamoDBContext = new DynamoDBContext(client);
 
             string url = context.MergedJobDataMap.GetString("Url");
@@ -46,7 +46,8 @@ namespace RockwellAutomation.Challenge.WebCronScrapping.Interactor.WebScrapingRe
             WebScrapingJobResult webScrapingJobResult = new WebScrapingJobResult
             {
                 Headers = string.Join(Environment.NewLine, resultDto.Headers),
-                JobId = jobId
+                JobId = jobId,
+                ExecutionDateInfo = $"Executed at {DateTime.UtcNow.AddHours(-5)}"
             };
             try
             {

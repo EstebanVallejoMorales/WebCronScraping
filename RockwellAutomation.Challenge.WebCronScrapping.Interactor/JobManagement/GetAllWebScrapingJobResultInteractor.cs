@@ -37,7 +37,8 @@ namespace RockwellAutomation.Challenge.WebCronScrapping.Interactor.JobManagement
                     webScrapingJobResultsDto.Add(new WebScrapingJobResultDto
                     {
                         Headers = item.Headers, 
-                        JobId = item.JobId
+                        JobId = item.JobId,
+                        ExecutionDateInfo = item.ExecutionDateInfo,
                     });
                 }
 

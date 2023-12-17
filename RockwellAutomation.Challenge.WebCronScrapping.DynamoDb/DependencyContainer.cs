@@ -21,9 +21,9 @@ namespace RockwellAutomation.Challenge.WebCronScrapping.DynamoDb
             {
                 RegionEndpoint = RegionEndpoint.USEast1
             };
-            //var credentials = new BasicAWSCredentials("", "");
-            //var client = new AmazonDynamoDBClient(credentials, config);
-            var client = new AmazonDynamoDBClient(config);
+            var credentials = new BasicAWSCredentials("AKIASSBH4I4MXLQPPGWJ", "k39RbpINfMv6/OLfyZPG7d1WXrLC+TLBn6pj+EWp");
+            var client = new AmazonDynamoDBClient(credentials, config);
+            //var client = new AmazonDynamoDBClient(config);
             services.AddSingleton<IAmazonDynamoDB>(client);
             services.AddSingleton<IDynamoDBContext, DynamoDBContext>();
 
