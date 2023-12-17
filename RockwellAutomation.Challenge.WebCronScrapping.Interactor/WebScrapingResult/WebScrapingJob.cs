@@ -11,6 +11,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
@@ -32,8 +33,9 @@ namespace RockwellAutomation.Challenge.WebCronScrapping.Interactor.WebScrapingRe
                 RegionEndpoint = RegionEndpoint.USEast1
             };
 
-            var credentials = new BasicAWSCredentials("AKIASSBH4I4MXLQPPGWJ", "k39RbpINfMv6/OLfyZPG7d1WXrLC+TLBn6pj+EWp");
-            var client = new AmazonDynamoDBClient(credentials, config);
+            //var credentials = new BasicAWSCredentials("", "");
+            //var client = new AmazonDynamoDBClient(credentials, config);
+            var client = new AmazonDynamoDBClient(config);
             DynamoDBContext dynamoDBContext = new DynamoDBContext(client);
 
             string url = context.MergedJobDataMap.GetString("Url");
