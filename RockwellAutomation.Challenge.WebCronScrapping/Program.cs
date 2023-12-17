@@ -1,5 +1,6 @@
 using RockwellAutomation.Challenge.WebCronScrapping.Presenter;
 using RockwellAutomation.Challenge.WebCronScrapping.Interactor;
+using RockwellAutomation.Challenge.WebCronScrapping.DynamoDb;
 
 namespace RockwellAutomation.Challenge.WebCronScrapping
 {
@@ -17,6 +18,7 @@ namespace RockwellAutomation.Challenge.WebCronScrapping
             builder.Services.AddSwaggerGen();
             builder.Services.DependencyInteractor();
             builder.Services.DependencyPresenter();
+            builder.Services.DependencyDynamoDb();
 
             var app = builder.Build();
 

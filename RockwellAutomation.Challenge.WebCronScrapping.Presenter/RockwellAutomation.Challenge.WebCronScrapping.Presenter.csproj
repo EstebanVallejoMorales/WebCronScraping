@@ -12,6 +12,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\RockwellAutomation.Challenge.WebCronScrapping.Dto\RockwellAutomation.Challenge.WebCronScrapping.Dto.csproj" />
+    <ProjectReference Include="..\RockwellAutomation.Challenge.WebCronScrapping.DynamoDb\RockwellAutomation.Challenge.WebCronScrapping.DynamoDb.csproj" />
     <ProjectReference Include="..\RockwellAutomation.Challenge.WebCronScrapping.OutputPort\RockwellAutomation.Challenge.WebCronScrapping.OutputPort.csproj" />
   </ItemGroup>
 

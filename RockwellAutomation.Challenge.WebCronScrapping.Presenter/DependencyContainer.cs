@@ -1,4 +1,6 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
+using RockwellAutomation.Challenge.WebCronScrapping.DynamoDb.Repositories;
+using RockwellAutomation.Challenge.WebCronScrapping.Entities.Interfaces;
 using RockwellAutomation.Challenge.WebCronScrapping.OutputPort.JobManagement;
 using RockwellAutomation.Challenge.WebCronScrapping.OutputPort.WebScrapingResult;
 using RockwellAutomation.Challenge.WebCronScrapping.Presenter.WebScrapingResult;
@@ -16,6 +18,8 @@ namespace RockwellAutomation.Challenge.WebCronScrapping.Presenter
         {
             services.AddScoped<IScheduleWebScrapingOutputPort, ScheduleWebScrapingPresenter>();
             services.AddScoped<IGenerateJobOutputPort, GenerateJobPresenter>();
+            services.AddScoped<IGetAllWebScrapingJobResultOutputPort, GetAllWebScrapingJobResultPresenter>();
+            services.AddScoped<IWebScrapingJobResultRepository, WebScrapingJobResultRepository>();
             return services;
         } 
     }

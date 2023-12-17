@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
@@ -7,7 +7,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\RockwellAutomation.Challenge.WebCronScrapping.Dto\RockwellAutomation.Challenge.WebCronScrapping.Dto.csproj" />
+    <PackageReference Include="AWSSDK.DynamoDBv2" Version="3.7.300.20" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="8.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\RockwellAutomation.Challenge.WebCronScrapping.Entities\RockwellAutomation.Challenge.WebCronScrapping.Entities.csproj" />
   </ItemGroup>
 

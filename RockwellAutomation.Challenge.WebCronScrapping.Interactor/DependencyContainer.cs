@@ -24,6 +24,7 @@ namespace RockwellAutomation.Challenge.WebCronScrapping.Interactor
             services.AddSingleton<ISchedulerFactory, StdSchedulerFactory>();
             services.AddScoped<IScheduleWebScrapingInputPort, ScheduleWebScrapingInteractor>();
             services.AddScoped<IGenerateJobInputPort, GenerateJobInteractor>();
+            services.AddScoped<IGetAllWebScrapingJobResultInputPort, GetAllWebScrapingJobResultInteractor>();
             services.AddScoped<IJob, WebScrapingJob>();
             services.AddSingleton<IDynamoDBContext,DynamoDBContext>();
             var config = new AmazonDynamoDBConfig

@@ -13,17 +13,19 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "InterrfaceAdapters", "Inter
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "FrameworksAndDrivers", "FrameworksAndDrivers", "{488C07E0-7635-47EB-B676-DAF60724D66C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RockwellAutomation.Challenge.WebCronScrapping.InputPort", "..\RockwellAutomation.Challenge.WebCronScrapping.InputPort\RockwellAutomation.Challenge.WebCronScrapping.InputPort.csproj", "{71CA0CEF-51F1-4BAA-A79E-B003F414EC35}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RockwellAutomation.Challenge.WebCronScrapping.InputPort", "..\RockwellAutomation.Challenge.WebCronScrapping.InputPort\RockwellAutomation.Challenge.WebCronScrapping.InputPort.csproj", "{71CA0CEF-51F1-4BAA-A79E-B003F414EC35}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RockwellAutomation.Challenge.WebCronScrapping.OutputPort", "..\RockwellAutomation.Challenge.WebCronScrapping.OutputPort\RockwellAutomation.Challenge.WebCronScrapping.OutputPort.csproj", "{06E8F03A-E3FA-4A58-8DE9-D89271C445EA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RockwellAutomation.Challenge.WebCronScrapping.OutputPort", "..\RockwellAutomation.Challenge.WebCronScrapping.OutputPort\RockwellAutomation.Challenge.WebCronScrapping.OutputPort.csproj", "{06E8F03A-E3FA-4A58-8DE9-D89271C445EA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RockwellAutomation.Challenge.WebCronScrapping.Interactor", "..\RockwellAutomation.Challenge.WebCronScrapping.Interactor\RockwellAutomation.Challenge.WebCronScrapping.Interactor.csproj", "{E7CEBC72-3FDF-4EF9-9845-152CBAF41935}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RockwellAutomation.Challenge.WebCronScrapping.Interactor", "..\RockwellAutomation.Challenge.WebCronScrapping.Interactor\RockwellAutomation.Challenge.WebCronScrapping.Interactor.csproj", "{E7CEBC72-3FDF-4EF9-9845-152CBAF41935}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RockwellAutomation.Challenge.WebCronScrapping.Entities", "..\RockwellAutomation.Challenge.WebCronScrapping.Entities\RockwellAutomation.Challenge.WebCronScrapping.Entities.csproj", "{1A6464A5-C6C4-4223-967C-CA77963C7072}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RockwellAutomation.Challenge.WebCronScrapping.Entities", "..\RockwellAutomation.Challenge.WebCronScrapping.Entities\RockwellAutomation.Challenge.WebCronScrapping.Entities.csproj", "{1A6464A5-C6C4-4223-967C-CA77963C7072}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RockwellAutomation.Challenge.WebCronScrapping.Presenter", "..\RockwellAutomation.Challenge.WebCronScrapping.Presenter\RockwellAutomation.Challenge.WebCronScrapping.Presenter.csproj", "{4F38FE62-E8A6-412A-BDFA-B3670C659447}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RockwellAutomation.Challenge.WebCronScrapping.Presenter", "..\RockwellAutomation.Challenge.WebCronScrapping.Presenter\RockwellAutomation.Challenge.WebCronScrapping.Presenter.csproj", "{4F38FE62-E8A6-412A-BDFA-B3670C659447}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RockwellAutomation.Challenge.WebCronScrapping.Dto", "..\RockwellAutomation.Challenge.WebCronScrapping.Dto\RockwellAutomation.Challenge.WebCronScrapping.Dto.csproj", "{041A7549-FE1A-4688-9BAF-90BAAF2E31C7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RockwellAutomation.Challenge.WebCronScrapping.Dto", "..\RockwellAutomation.Challenge.WebCronScrapping.Dto\RockwellAutomation.Challenge.WebCronScrapping.Dto.csproj", "{041A7549-FE1A-4688-9BAF-90BAAF2E31C7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RockwellAutomation.Challenge.WebCronScrapping.DynamoDb", "..\RockwellAutomation.Challenge.WebCronScrapping.DynamoDb\RockwellAutomation.Challenge.WebCronScrapping.DynamoDb.csproj", "{7A0A92E4-B585-4B59-996F-B9ABA74EBC9A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -59,6 +61,10 @@ Global
 		{041A7549-FE1A-4688-9BAF-90BAAF2E31C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{041A7549-FE1A-4688-9BAF-90BAAF2E31C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{041A7549-FE1A-4688-9BAF-90BAAF2E31C7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7A0A92E4-B585-4B59-996F-B9ABA74EBC9A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7A0A92E4-B585-4B59-996F-B9ABA74EBC9A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7A0A92E4-B585-4B59-996F-B9ABA74EBC9A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7A0A92E4-B585-4B59-996F-B9ABA74EBC9A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -71,6 +77,7 @@ Global
 		{1A6464A5-C6C4-4223-967C-CA77963C7072} = {1A2A8CE1-AF93-410E-99C9-10B505B7AE5A}
 		{4F38FE62-E8A6-412A-BDFA-B3670C659447} = {DC7A3670-558E-4CB5-8014-F0396C20DF24}
 		{041A7549-FE1A-4688-9BAF-90BAAF2E31C7} = {FEC897D6-9DB2-4A8C-952B-F75FBC802BE5}
+		{7A0A92E4-B585-4B59-996F-B9ABA74EBC9A} = {DC7A3670-558E-4CB5-8014-F0396C20DF24}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4B164032-CCD5-4748-AAAE-988C23100040}
