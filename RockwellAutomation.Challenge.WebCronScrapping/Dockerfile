@@ -11,15 +11,15 @@ ENV CHROME_BIN=/usr/bin/chromium
 FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
 ARG BUILD_CONFIGURATION=Release
 WORKDIR /src
-COPY ["RockwellAutomation.Challenge.WebCronScrapping.csproj", "."]
+COPY ["RockwellAutomation.Challenge.WebCronScrapping/RockwellAutomation.Challenge.WebCronScrapping.csproj", "."]
 RUN dotnet restore "./././RockwellAutomation.Challenge.WebCronScrapping.csproj"
 COPY . .
 WORKDIR "/src/."
-RUN dotnet build "./RockwellAutomation.Challenge.WebCronScrapping.csproj" -c $BUILD_CONFIGURATION -o /app/build
+RUN dotnet build "RockwellAutomation.Challenge.WebCronScrapping/RockwellAutomation.Challenge.WebCronScrapping.csproj" -c $BUILD_CONFIGURATION -o /app/build
 
 FROM build AS publish
 ARG BUILD_CONFIGURATION=Release
-RUN dotnet publish "./RockwellAutomation.Challenge.WebCronScrapping.csproj" -c $BUILD_CONFIGURATION -o /app/publish /p:UseAppHost=false
+RUN dotnet publish "RockwellAutomation.Challenge.WebCronScrapping/RockwellAutomation.Challenge.WebCronScrapping.csproj" -c $BUILD_CONFIGURATION -o /app/publish /p:UseAppHost=false
 
 FROM base AS final
 WORKDIR /app

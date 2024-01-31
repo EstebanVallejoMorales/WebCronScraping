@@ -33,9 +33,31 @@ namespace RockwellAutomation.Challenge.WebCronScrapping.Interactor.WebScrapingRe
                 RegionEndpoint = RegionEndpoint.USEast1
             };
 
-            var credentials = new BasicAWSCredentials("AKIASSBH4I4MXLQPPGWJ", "k39RbpINfMv6/OLfyZPG7d1WXrLC+TLBn6pj+EWp");
-            var client = new AmazonDynamoDBClient(credentials, config);
-            //var client = new AmazonDynamoDBClient(config);
+            string accessKey = string.Empty;
+            string secretKey = string.Empty;
+
+            try
+            {
+                accessKey = Environment.GetEnvironmentVariable("ACCESS_KEY") ?? string.Empty;
+                secretKey = Environment.GetEnvironmentVariable("SECRET_KEY") ?? string.Empty;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+
+            AmazonDynamoDBClient client;
+
+            if (accessKey != string.Empty && secretKey != string.Empty)
+            {
+                var credentials = new BasicAWSCredentials(accessKey, secretKey);
+                client = new AmazonDynamoDBClient(credentials, config);
+            }
+            else
+            {
+                client = new AmazonDynamoDBClient(config);
+            }
+
             DynamoDBContext dynamoDBContext = new DynamoDBContext(client);
 
             string url = context.MergedJobDataMap.GetString("Url");
