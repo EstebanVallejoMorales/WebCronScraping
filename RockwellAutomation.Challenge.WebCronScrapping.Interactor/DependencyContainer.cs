@@ -27,12 +27,12 @@ namespace RockwellAutomation.Challenge.WebCronScrapping.Interactor
             services.AddScoped<IGetAllWebScrapingJobResultInputPort, GetAllWebScrapingJobResultInteractor>();
             services.AddScoped<IJob, WebScrapingJob>();
             services.AddSingleton<IDynamoDBContext,DynamoDBContext>();
-            var config = new AmazonDynamoDBConfig
-            {
-                RegionEndpoint = RegionEndpoint.USEast1
-            };
-            var client = new AmazonDynamoDBClient(config);
-            services.AddSingleton<IAmazonDynamoDB>(client);
+            //var config = new AmazonDynamoDBConfig
+            //{
+            //    RegionEndpoint = RegionEndpoint.USEast1
+            //};
+            //var client = new AmazonDynamoDBClient(config);
+            //services.AddSingleton<IAmazonDynamoDB>(client);
             services.AddQuartz(q =>
             {
                 q.UseMicrosoftDependencyInjectionJobFactory();
